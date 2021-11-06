@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('books');
 });
 
 //追加ルート
@@ -27,4 +27,4 @@ Route::get('/book/{book}', function (Book $book) {
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
