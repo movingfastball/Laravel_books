@@ -12,7 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('books');
+});
+
+//追加ルート
+Route::post('/books', function (Request $request) {
+    
+});
+
+//削除ルート
+Route::get('/book/{book}', function (Book $book) {
+    
 });
 
 Auth::routes();
