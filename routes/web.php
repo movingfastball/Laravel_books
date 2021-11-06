@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//追加ルート
+Route::post('/books', function (Request $request) {
+    
+});
+
+//削除ルート
+Route::get('/book/{book}', function (Book $book) {
+    
+});
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
