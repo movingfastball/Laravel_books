@@ -17,6 +17,7 @@ class CreateBooksTables extends Migration
             $table->bigIncrements('id');
             $table->string('item_name');
             $table->integer('item_number');
+            $table->integer('item_amount');
             $table->datetime('published');
             $table->timestamps();
         });
