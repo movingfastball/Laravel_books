@@ -28,7 +28,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="book" class="col-sm-3 control-label">公開日</label>
-                    <input type="date" name="item_name" class="form-control">
+                    <input type="date" name="published" class="form-control">
                 </div>
             </div>
 

@@ -52,8 +52,8 @@ class BooksController extends Controller
         //バリデーション
         $validator = Validator::make($request->all(), [
             'item_name' => 'required|min:3|max:255',
-            'item_number' => 'required | min:1 | max:3',
-            'item_amount' => 'required | max:6',
+            'item_number' => 'required | min:1 | max:3 | ',
+            'item_amount' => 'required | max:6 | ',
             'published'   => 'required',
         ]);
         //バリデーション:エラー 
@@ -64,10 +64,10 @@ class BooksController extends Controller
         }
         // Eloquentモデル（登録処理）
         $books = new Book;
-        $books->item_name =    $request->item_name;
-        $books->item_number =  $request->item_number;
-        $books->item_amount =  $request->item_amount;
-        $books->published =    $request->published;
+        $books->item_name =    $request->item_name; //本のタイトル
+        $books->item_number =  $request->item_number; //数
+        $books->item_amount =  $request->item_amount; //金額
+        $books->published =    $request->published; //公開日
         $books->save(); 
         return redirect('/');
     }
