@@ -69,7 +69,7 @@ class BooksController extends Controller
         $books->item_amount =  $request->item_amount; //金額
         $books->published =    $request->published; //公開日
         $books->save(); 
-        return redirect('/');
+        return redirect('/')->with('message','本登録が完了しました');
     }
 
     public function destroy(Book $book){
