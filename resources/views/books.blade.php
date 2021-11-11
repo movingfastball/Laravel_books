@@ -86,6 +86,11 @@
                         @endforeach
                     </tbody>
                 </table>
+                <div class="row">
+                    <div class="coll-md-4 offset-md-4">
+                        {{ $books->links() }}
+                    </div>
+                </div>
             </div>
         </div>
     @endif
